@@ -89,6 +89,7 @@ public class String1 {
         }
         System.out.println((int) 'a');
         System.out.println((int) 'z');
+        System.out.println("Hello world");
 
     }
 
