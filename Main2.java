@@ -13,6 +13,7 @@ public class Main2 {
 
     static void greet(){
         System.out.println("Hello World");
+        greet();
     }
 
     static void print(){

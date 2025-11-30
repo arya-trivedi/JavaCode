@@ -1,0 +1,1 @@
+This code is a continuation of the Person class. The purpose of this exercise was to create another Person object to see what the results would be.

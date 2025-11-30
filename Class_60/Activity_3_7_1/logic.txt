@@ -1,0 +1,2 @@
+This is the Person class in which both name and email variables are both instance variables, so they cannot be directly called by the 
+static method printStatic, meaning that printStatic requires an object to pass both variables from the Person class. 

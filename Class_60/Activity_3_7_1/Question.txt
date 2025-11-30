@@ -1,0 +1,1 @@
+Note that the static method printStatic has errors in it because it cannot access the instance variables and methods. Fix the printStatic method by giving it the Person object as a parameter and using this object to call its instance variables and methods. Also fix the method call to printStatic in main to pass in the object as an argument.

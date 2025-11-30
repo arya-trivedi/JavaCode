@@ -1,0 +1,1 @@
+Fix the bugs in the following code. Static methods should only access static variables.

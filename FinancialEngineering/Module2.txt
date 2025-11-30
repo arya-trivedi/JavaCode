@@ -1,0 +1,148 @@
+Review of Basic Probability
+
+
+Discrete Random Variables
+
+Definition. The cummulative distribution function of a random variable, X, is defined by 
+
+F(x) := P(X <= x).
+
+Definition. A discrete random variable, X, has probability mass function(PMF), p(.), if p(x) >= 0 and for all events A we have
+P(X<=A) = summation of p(x)
+
+Definition. The expected value of a discrete random variable, X, is given by
+E(x) := summation of xi(p(xi))
+
+Definition. The variance of any random variable, X, is defined as 
+Var(x) := E((x-E(x))^2)
+       := E(X^2) - E(X)^2
+
+The Binomial Distribution
+
+We say X has a Binomial Distribution, or X ~ Bin(n,p), if P(x=r) = (n!)/r!(n-r)! * p^r(1-p)^n-r
+
+For example, X might represent the number of heads in n independent coin tosses, where p = P(head). The mean and variance of the binomial distribution satisfy
+E(X) = np
+Var(x) = np(1-p)
+
+A Financial Application
+----------------------------
+
+* Suppose a fund manager outperforms the market in a given year with probability p and that she underperforms the market with probability 1-p
+* She has a track record of 10 years and has outperformed the market in 8 of the 10 years.
+* Moreover, performance in any one year is independent of performance in other years.
+
+Question: How likely is a track record as good as this if the fund manager had no skill so that p = 1/2?
+
+Answer: Let X be the number of outperforming years. Since the fund manager has no skill, X ~ Bin(u=10,p=1/2) and
+
+P(X > 8) = summation(r=8 to n) * n!/r!(n-r)! * p^r(1-p)^n-r
+
+Question: Suppose there are M fund managers? How well should the best one do over the 10 year period if none of them had any skill
+
+The Poisson Distribution
+----------------------------
+We say X has a Poisson(ƛ) distribution if
+P(X=R) ƛ^re^-x/r!
+E(X) = ƛ and Var(X) = ƛ
+
+For example, the mean is calculated as 
+
+E(X) = summation(r=0, to ∞)r*P(x=r) = summation(r=0, to ∞)r*ƛ^r*e^-x/r! = summation(r=1, to ∞)ƛ^r-1*e^-x/(r-1)! = summation(r=0, to ∞)ƛ^r*e^-x/(r)! = ƛ.
+
+Bayes' Theorem
+-----------------------------
+Let A and B be two events for which P(B) ≠ 0. Then
+
+P(A|B) = P(A⋂B)/P(B) = (P(B|A)*P(A))/P(B) = P(B|A)*P(A)/(∑ⱼP(B|Aⱼ)P(Aⱼ))
+
+where the Aⱼ's form a partition of the sample space
+
+partition -> Aᵢ ⋂ Aⱼ = non-zero, i≠j. Exatly one Aᵢ must occur 
+
+An Example: Tossing Two Fair 6-Sided Dice
+
+
+* Let Y₁ and Y₂ be the outcomes of tossing two fair dice independently of one another.
+* Let X:= Y₁+Y₂. Question: What is P(Y₁>=4|X>=8)?
+
+P(Y₁>=4⋂X>=8)/P(X>=8) = (12/36)/(15/36) = 4/5
+
+Continuous Random Variables
+-------------------------------
+Definition. A continuous random variable, X, has probability density function(PDF), f(.), if f(x)>=0 and for all events A
+
+P(X⊂A) = ∫ᴬf(y) dy.
+
+The CDF and PDF are related by
+
+F(X) = ∫from -∞ to x(f(y)*dy)
+
+It is often convenient to observe that
+
+P(X⊂(x-⊂/2, x+⊂/2)) ≈ ⊂f(x) = ∫ₓ₋ε⁄2ˣ⁺ε/2 * f(y)dy
+
+The Normal Distribution
+-------------------------------
+We say X has a normal distribution, or X~N(u,σ^2), if it has the density function   
+
+The mean and variance of the normal distribution satisfy
+
+E(X) = u
+Var(X) = σ^2
+
+The Log Normal Distribution
+--------------------------------
+We say that X has a log-normal distribution, or X~LN(u,σ^2), if
+
+log(X) ~ N(u,σ^2).
+
+The mean and variance of the log-normal distribution satisfy
+
+E(X) = exp(μ + σ^2/2)
+Var(X) = exp(2μ+σ^2)(exp(σ^2)-1)
+
+The log-normal distribution plays a very important role in financial applications
+
+Review of Conditional Expectations and Variances
+--------------------------------------------------
+
+Conditional Expectations and Variances
+-----------------------------------------
+Let X and Y be two random Variables
+
+The conditional expectation identity says
+
+E[X] = E[E[X|Y]]
+
+and the conditional variance identity says
+
+Var(X) = Var[E[X|Y]] + E[Var(X|Y)].
+
+Note that E[X|Y] and Var(X|Y) are both functions of Y and therefore random variables themselves
+
+A Random Sum of Random Variables
+----------------------------------
+
+Let W = X₁ + X₂ + .... + Xₙ where the Xᵢ's are ||D with mean μₓ and variance σ^2, and where N is also a random variable, independent of the Xᵢ's
+
+Question: What is E[W]?
+Answer: The conditional expectation identity implies
+
+E[W] = E[E[∑ᴺᵢ₌₁Xᵢ|N]] = E[Nμₓ] = μₓE[N].
+
+Question: What is Var(W)?
+Answer: The conditional variance identity implies
+
+Var(W) = Var(E[W|N]) + E[Var(W|N)] = Var(μₓN) + E[Nσₓ^2] = μₓ^2Var(N) + σₓ^2E[N]
+
+An example: Chickens and Eggs
+-----------------------------------
+A hen lays N eggs where N ~ Poisson(ƛ). Each egg hatches and yields a chicken with probability p, independently of the other eggs and N. 
+Let K be the number of chickens
+
+Question: What is E[K|N]?
+
+Answer: We can use indicator functions to answer this question.
+
+In particular, can write 

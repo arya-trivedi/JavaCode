@@ -1,0 +1,22 @@
+Floating rate bonds
+--------------------
+
+Linear pricing
+---------------------
+Theorem. (Linear Pricing) Suppose there is no arbitrage. Suppose also
+    * Price of cash flow cₐ is pₐ
+    * Price of cash flow cₔ is pₔ
+Then the price of cash flow that pays c = cₐ + cₔ must be pₐ+pₔ.
+
+Let p denote the price of the total cash flow c. Suppose p < pₐ + pₔ, i.e. c is cheap! 
+Will create an arbitrage portfolio, i.e. a free-lunch portfolio.
+
+    * Purchase c at price P
+    * Sell cash flow cₐ and cₔ separately
+
+Price of the portfolio = p - pₐ - pₔ < 0, i.e. net income at time t=0.
+The cash flows cancel out at all times. Future cash flows = zero. Free lunch!
+No arbitrage ⇛ no free lunch. Therefore, p >= pₐ + pₔ
+
+We can reverse the argument if p > pₐ+pₔ
+    * Note that we need a liquid market for buying/selling all the cash flows
