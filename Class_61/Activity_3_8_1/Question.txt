@@ -1,0 +1,1 @@
+Click on all the variable declarations that are at Class Level Scope.

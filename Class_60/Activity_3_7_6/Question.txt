@@ -1,0 +1,5 @@
+This class should print out the The Ants Go Marching Song using two static methods: chorus() and verse(). 
+The chorus method should print out the last two lines of each verse. 
+The verse method should take two parameters, a number and an action, and print out the verse with the number and action. 
+Add a public static variable called numVerses that keeps track of the number of verses. 
+Increment this variable in the method verse and print it out at the beginning of the verse.

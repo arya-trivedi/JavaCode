@@ -1,0 +1,3 @@
+Try the following code to see that you cannot access the variables outside of their scope levels in the toString() method. 
+Explain to someone sitting next to you why you can’t access these. 
+Try to fix the errors by either using variables that are in scope or moving the variable declarations so that the variables have larger scope.

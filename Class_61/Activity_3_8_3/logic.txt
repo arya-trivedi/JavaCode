@@ -1,0 +1,2 @@
+In this question, we had to change the variable declarations in which the variables i and id wasn't allowed access outside the for loop, 
+because both variables were declared inside the for loop, so we declared them outside the for loop 

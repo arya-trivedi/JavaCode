@@ -1,0 +1,2 @@
+In this code, I changed the variable that was being printed in the printMax function to the maxTemp variable because both the function and 
+the variable were static, I also defined the return type of the function to void, as it was only printing the variable.

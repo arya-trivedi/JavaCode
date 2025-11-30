@@ -1,0 +1,1 @@
+In this example, the local variable is used instead of the instance variable of the same name. What will the code print out? Try it with the CodeLens button.

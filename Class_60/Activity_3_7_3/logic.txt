@@ -1,0 +1,2 @@
+The output of the main method would be C, Max Temp: 100, because t3 won't print since the variable maxTemp is a static variable so the
+memory would be shared across all three objects. 

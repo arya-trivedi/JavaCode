@@ -1,0 +1,7 @@
+Consider the class Temperature below which has a static variable. What is the output of the main method below?
+
+A. Max Temp: 0
+B. There is a compiler error because the static variable maxTemp cannot be used inside a non-static constructor.
+C. Max Temp: 100
+D. Max Temp: 75
+E. Max Temp: 65
